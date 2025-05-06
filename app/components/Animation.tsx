@@ -65,7 +65,7 @@ export default function Animation() {
     },
     {
       id : 2 , 
-      name : "Love"
+      name : "INTRIGUE"
     }, 
   ]
  
