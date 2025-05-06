@@ -1,0 +1,605 @@
+@import "tailwindcss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Coda:wght@400;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/fonts/CodaCaption-Heavy.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: "CustomFont";
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow-x: hidden;
+}
+
+ul .li{
+  position: relative;
+}
+
+ul .li::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: red;
+  right: 0;
+  bottom: 0;
+  transition: .5s ease-in;
+}
+
+ul .li:hover::after{
+  width: 100%;
+}
+
+ul .li:hover{
+  transform: rotate(15deg);
+}
+
+.ticket-cont{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ticket{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  height: 50px;
+  color: var(--background);
+  padding: 10px;
+  margin-top: 2px;
+}
+
+.ticket #buy{
+  background-color: #FFF8F8; 
+  color: black;
+  width: 98px;
+}
+
+
+.close{
+  height: 40px;
+}
+
+.btn{
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+
+.uppercase{
+  letter-spacing: 5px;
+}
+
+@media screen and (width < 1477px) {
+  .hello{
+    max-width: 800px;
+  }
+
+  .last , .uppercase{
+    font-size: 80px;
+  }
+
+  .img{
+    width: 480px;
+    height: 500px;
+  }
+}
+
+@media screen and (width < 1440px) {
+  .hello{
+    max-width: 650px;
+  }
+  .last , .uppercase{
+    font-size: 76px;
+  }
+}
+
+@media screen and (width < 1365px) {
+  .hello{
+    max-width: 550px;
+  }
+  .last , .uppercase{
+    font-size: 72px;
+  }
+  .img{
+    width: 380px;
+    height: 480px;
+  }
+}
+
+
+@media screen and (width < 1319px) {
+  .hello{
+    max-width: 500px;
+  }
+  .last , .uppercase{
+    font-size: 70px;
+  }
+  .img{
+    width: 380px;
+    height: 480px;
+  }
+}
+
+
+@media screen and (width < 1298px) {
+  .hello{
+    max-width: 450px;
+  }
+  .last , .uppercase{
+    font-size: 66px;
+  }
+  .img{
+    width: 380px;
+    height: 480px;
+  }
+}
+
+
+@media screen and (width < 1268px) {
+  .hello{
+    max-width: 400px;
+  }
+  .last , .uppercase{
+    font-size: 62px;
+  }
+  .img{
+    width: 350px;
+    height: 450px;
+  }
+
+  .an{
+    max-width: 550px;
+  }
+  
+}
+
+
+
+
+
+@media screen and (width < 1215px) {
+  .hello{
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  h1.last , .uppercase{
+    font-size: 60px;
+  }
+
+  .an{
+    max-width: 450px;
+  }
+  
+}
+
+@media screen and (width < 1096px) {
+  .hello{
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .dr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    
+  }
+
+  .img{
+    width: 300px;
+    height: 400px;
+  }
+  h1.last{
+    font-size: 56px;
+    text-align: start;
+  }
+  .an{
+    max-width: 450px;
+  }
+  .try-txt{
+    font-size: 24px;
+  }
+  
+}
+
+
+@media screen and (width < 1018px) {
+  .hello{
+    max-width: 100%;
+  }
+
+  .last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dr{
+    position: relative;
+    max-width: 100%;
+  }
+  .mainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .an{
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+@media screen and (width < 768px) {
+  .hello{
+    display: flex;
+    flex-direction: column !important;
+    max-width: 100%;
+    gap: 0px;
+  }
+  .cont{
+    display: flex !important;
+    width: 100%;
+    min-height: 100%;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px !important;
+  }
+  .cont .img{
+    width: 400px; 
+    height: 500px;
+  }
+  p.para{
+    padding: 8px !important;
+  } 
+  h1.last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:72px;
+    line-height: 100%;
+    padding-top: 10px;
+    position: relative;
+  }
+  ul{
+    position: absolute !important;
+    right: 10px;
+    top: 20%;
+    bottom: 50%;
+    padding: 10px;
+  }
+  ul a{
+    font-size: 32px;
+  }
+}
+
+@media screen and (width < 738px) {
+  .hello h1.last{
+     font-size: 69px !important;
+   }
+ }
+
+ @media screen and (width < 708px) {
+  .hello h1.last{
+     font-size: 65px !important;
+   }
+ }
+
+
+ @media screen and (width < 667px) {
+  .hello h1.last{
+     font-size: 60px !important;
+   }
+ }
+
+ @media screen and (width < 629px) {
+ .cont ul a{
+  font-size: 24px !important;
+}
+.hello .img{
+  width: 350px;
+  height: 450px;
+}
+ }
+
+
+ @media screen and (width < 615px) {
+  .hello h1.last{
+    font-size: 56px !important;
+  }
+}
+
+@media screen and (width < 574px) {
+  .hello h1.last{
+    font-size: 54px !important;
+  }
+
+  .hello .img{
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media screen and (width < 554px) {
+  .hello h1.last{
+    font-size: 52px !important;
+  }
+
+  .hello .img{
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media screen and (width < 533px) {
+  .hello h1.last{
+    font-size: 50px !important;
+  }
+
+  .hello .img{
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media screen and (width < 513px) {
+  .hello h1.last{
+    font-size: 48px !important;
+  }
+
+  .hello .img{
+    width: 280px;
+    height: 380px;
+  }
+}
+
+
+@media screen and (width < 492px) {
+  .hello h1.last{
+    font-size: 46px !important;
+  }
+
+  .cont ul a{
+    font-size: 20px !important;
+  }
+
+  .hello .img{
+    width: 250px;
+    height: 350px;
+  }
+}
+
+
+@media screen and (width < 472px) {
+  .hello h1.last{
+    font-size: 44px !important;
+  }
+
+  .cont ul a{
+    font-size: 20px !important;
+  }
+  #buy{
+    width: 60px !important;
+  }
+  .hello .img{
+    width: 250px;
+    height: 350px;
+  }
+}
+
+@media screen and (width < 452px) {
+  .hello h1.last{
+    font-size: 42px !important;
+  }
+
+  .uppercase{
+    font-size: 80px;
+  }
+
+  .cont ul a{
+    font-size: 18px !important;
+    letter-spacing: 8px;
+  }
+
+  .hello .img{
+    width: 250px;
+    height: 350px;
+  }
+}
+
+
+@media screen and (width < 431px) {
+  .hello h1.last{
+    font-size: 40px !important;
+  }
+
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 5px;
+  }
+
+  .hello .img{
+    width: 230px;
+    height: 330px;
+  }
+}
+
+
+@media screen and (width < 414px) {
+  .uppercase{
+    font-size: 48px;
+  }
+  
+}
+
+
+@media screen and (width < 410px) {
+  .hello h1.last{
+    font-size: 38px !important;
+  }
+
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 5px;
+  }
+
+  .hello .img{
+    width: 230px;
+    height: 330px;
+  }
+}
+
+
+@media screen and (width < 390px) {
+  .hello h1.last{
+    font-size: 36px !important;
+  }
+
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 5px;
+  }
+
+  .hello .img{
+    width: 230px;
+    height: 330px;
+  }
+  
+}
+
+
+@media screen and (width < 369px) {
+  .hello h1.last{
+    font-size: 34px !important;
+  }
+  .uppercase{
+    font-size: 74px;
+  }
+
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 5px;
+  }
+
+  .hello .img{
+    width: 200px;
+    height: 300px;
+  }
+}
+
+
+@media screen and (width < 349px) {
+  .hello h1.last{
+    font-size: 32px !important;
+  }
+
+  .uppercase{
+    font-size: 72px;
+  }
+
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 5px;
+  }
+
+  .hello .img{
+    width: 180px;
+    height: 280px;
+  }
+}
+
+
+@media screen and (width < 339px) {
+
+  .uppercase{
+    font-size: 70px;
+  }
+}
+
+
+@media screen and (width < 329px) {
+  .hello h1.last{
+    font-size: 30px !important;
+  }
+  .uppercase{
+    font-size: 68px;
+  }
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 3px;
+  }
+
+  .hello .img{
+    width: 150px;
+    height: 250px;
+  }
+}
+
+
+@media screen and (width < 320px) {
+  .uppercase{
+    font-size: 64px;
+  }
+  
+}
+
+@media screen and (width < 308px) {
+  .hello h1.last{
+    font-size: 28px !important;
+  }
+
+  .cont ul a{
+    font-size: 16px !important;
+    letter-spacing: 3px;
+  }
+
+  .hello .img{
+    width: 150px;
+    height: 250px;
+  }
+}
+
+
+
+@media screen and (width < 301px) {
+  .uppercase{
+    font-size: 60px;
+  }
+  
+}
